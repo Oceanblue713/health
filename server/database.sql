@@ -8,3 +8,4 @@ CREATE TABLE users(
 );
 
 INSERT INTO users (name, email, password) VALUES ('Andy', 'aaaa@email.com', 'password');
+INSERT INTO users (name, email, password) VALUES ('Andy', 'aaaa22@email.com', 'password');
