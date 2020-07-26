@@ -2,7 +2,9 @@ import React, { Fragment } from 'react';
 
 const Login = () => {
   return (
-    <Fragment>Login</Fragment>
+    <Fragment>
+      <h1>Login</h1>
+    </Fragment>
   )
 }
 

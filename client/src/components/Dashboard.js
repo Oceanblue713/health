@@ -2,7 +2,9 @@ import React, { Fragment } from 'react';
 
 const Dashboard = () => {
   return (
-    <Fragment>Dashboard</Fragment>
+    <Fragment>
+      <h1>Dashboard</h1>
+    </Fragment>
   )
 }
 

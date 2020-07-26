@@ -2,7 +2,9 @@ import React, { Fragment } from 'react';
 
 const Register = () => {
   return (
-    <Fragment>Register</Fragment>
+    <Fragment>
+      <h1>Register</h1>
+    </Fragment>
   )
 }
 
