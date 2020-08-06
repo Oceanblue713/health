@@ -1,4 +1,4 @@
-import React, {Fragment, useState} from 'react';
+import React, {Fragment, useState, useEffect} from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
@@ -12,6 +12,25 @@ function App() {
   const setAuth = (boolean) => {
     setIsAuthenticated(boolean);
   }
+
+  async function isAuth() {
+    try {
+      const response = await fetch("http://localhost:5001/auth/is-verify", {
+        method: "GET",
+        headers: { token: localStorage.token }
+      });
+
+      const parseRes = await response.json();
+
+      parseRes === true ? setIsAuthenticated(true) : setIsAuthenticated(false);
+    } catch(err) {
+      console.error(err.message);
+    }
+  }
+
+  useEffect(() => {
+    isAuth();
+  });
 
   return (
     <Fragment>
